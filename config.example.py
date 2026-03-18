@@ -7,30 +7,37 @@ API_SECRET = "your_api_secret"
 PERSON_ID = "your_person_id"
 PASSWORD = "your_password"
 
+# === FinMind API Token ===
+# 申請：https://finmindtrade.com/analysis/#/Signin
+FINMIND_TOKEN = ""  # 免費版每天 600 次請求
+
 # === 交易標的 ===
 SYMBOL = "2330"          # 台積電
 EXCHANGE = "TSE"         # 上市
 
 # === OBI 參數 ===
-OBI_LEVELS = 5            # 用幾檔委買委賣
-OBI_THRESHOLD = 0.25      # 進場閾值
+OBI_LEVELS = 5
+OBI_THRESHOLD = 0.25
 
 # === VPIN 參數 ===
-VPIN_BUCKET_SIZE = 500    # 每桶成交量（張）
-VPIN_WINDOW = 50          # 計算 VPIN 的桶數
-VPIN_THRESHOLD = 0.6      # 超過此值視為流動性風險，不進場
+VPIN_BUCKET_SIZE = 500
+VPIN_WINDOW = 50
+VPIN_THRESHOLD = 0.6
 
 # === Trade Imbalance 參數 ===
-TI_WINDOW = 20            # 最近幾筆 tick
-TI_THRESHOLD = 0.25       # 進場閾值
+TI_WINDOW = 20
+TI_THRESHOLD = 0.25
 
 # === 風控 ===
-STOP_LOSS_PCT = 0.005     # 0.5% 停損
-TAKE_PROFIT_PCT = 0.012   # 1.2% 停利
-MAX_POSITION = 1          # 最大持倉（張）
+STOP_LOSS_PCT = 0.005
+TAKE_PROFIT_PCT = 0.012
+MAX_POSITION = 1
 FORCE_CLOSE_HOUR = 13
 FORCE_CLOSE_MINUTE = 20
 
 # === 模式 ===
-MODE = "paper"            # "paper" 模擬 | "live" 真實
-LOG_TICKS = True          # 是否記錄 tick 到 CSV
+MODE = "paper"
+LOG_TICKS = True
+
+# === 籌碼引擎 ===
+CHIP_REFRESH_INTERVAL_SEC = 1800  # 每 30 分鐘刷新一次籌碼
